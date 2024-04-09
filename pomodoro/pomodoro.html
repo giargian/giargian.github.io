@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+<title>Pomodoro Timer</title>
+
+<body> 
+    
+    <div class="container">
+
+        <div id="leaf1"></div>
+        <div id="leaf2"></div>
+        <div id="leaf3"></div>
+
+        <h1 id="nome"> Pomodoro </h1>
+        
+        <div id="st">
+            <label for="studio-in">Tempo di studio</label>
+            <input type="number" name="studio-in" id="studio-in" value="1" min="0"></input>
+        </div>
+
+        <div id="pa">
+            <label for="pausa_in">Tempo di pausa</label>
+            <input type="number" name="pausa-in" id="pausa-in" value="1" min="0"></input>
+        </div>
+
+        <div id="ci">
+            <label for="Ncicli">Numero di cicli</label>
+            <input type="number" name="Ncicli" id="Ncicli" value="0" min="0"></input>
+        </div>
+
+        <div class="ldata">
+            <div id="ltimer" class="timer">00:00</div>
+        </div>
+
+        <div class="pdata">
+            <div id="ptimer" class="timer">00:00</div>
+        </div>
+        
+        <div class="cdata">
+            <p id="counter" class="timer" > 0 </p>
+        </div>
+        
+        <div class="bottoniapedali">        
+            <button id="inizia" onclick="start()"> start</button>
+        </div>
+    <div>
+    <script src="./index.js"></script>
+</body>
+</html>

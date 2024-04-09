@@ -1,0 +1,269 @@
+:root{
+    font-size: 62,5%;
+    --fontone:#ffffffb7;
+    --red:tomato;
+    --green:rgb(18, 78, 18);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+h1 {
+  color:var(--green);
+  font-size:2rem;  
+}
+
+body{
+  height: 50vh;
+  width: 40vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: skyblue ;
+}
+
+.container{
+  position: relative;
+  display: grid;
+  margin-top: 30vh;
+  margin-left:60vw;
+  height: 300px;
+  width: 700px;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 0fr 0.5fr 0.5fr 1fr 0.3fr;
+  column-gap: 0.2vw;
+  background-color: var(--red);
+  grid-template-areas: 
+    "l1 l2 l3"
+    "nome nome nome"
+    "studio pausa ciclo"
+    "ltimer ptimer counter"
+    "inizia inizia inizia";
+  border-radius: 20%;
+}
+
+#leaf1 {
+  grid-area: l1;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  top:-85px;
+  right: -83px;
+	width: 100px;
+	height: 100px;
+  z-index: -50;
+	border-radius: 0 100px;
+	background-color: var(--green);
+	transform: rotate(0deg);
+}
+
+#leaf2 {
+  grid-area: l2;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+	width: 100px;
+	height: 100px;
+  top: -90px;
+  z-index: -50;
+	border-radius: 0 100px;
+	background-color:var(--green);
+	transform: rotate(45deg);
+}
+
+#leaf3 {
+  grid-area: l3 ;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  top:-85px;
+  left: -83px;
+	width: 100px;
+	height: 100px;
+  z-index: -50;
+  border-radius: 100px 0;
+	background-color: var(--green);
+	transform: rotate(0deg);
+}
+
+
+
+#nome{
+  grid-area: nome;
+  align-self: center;
+  justify-self: center;
+}
+
+#st{
+  grid-area: studio;
+  align-self: center;
+  justify-self: center;
+
+}
+
+#pa{
+  grid-area:pausa;
+  align-self: center;
+  justify-self: center;
+}
+
+#ci{
+  grid-area: ciclo;
+  align-self: center;
+  justify-self: center;
+}
+
+
+.timer{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  color:var(--red); 
+  font-size: 1.5rem;
+}
+
+#ltimer{
+  align-self: center;
+  justify-self: center;
+  display:flex;
+}
+
+.ldata{
+  --angle: 360deg;
+  --color:  rgb(138, 175, 36);
+
+  grid-area: ltimer;
+  align-self: center;
+  justify-self: center;
+  display:grid;
+  place-items: center;
+
+  position:relative;
+  z-index:100;
+
+  height: 80px;
+  aspect-ratio: 1/ 1;
+  border-radius: 50%;
+  background: conic-gradient(var(--color) 0, var(--color) var(--angle), white var(--angle),white 360deg);
+}
+
+.ldata::after{
+  content:'';
+  position:absolute;
+  z-index: -1;
+  height: 90%;
+  width: 90%;
+  top: 5%;
+  left: 5%;
+  border-radius: 50%;
+  background-color: var(--green);
+}
+
+
+
+#ptimer{
+  align-items: center;
+  justify-items: center;
+  display:flex;
+}
+
+.pdata{
+  --angle: 360deg;
+  --color: rgb(138, 175, 36);
+
+  grid-area: ptimer;
+  align-self: center;
+  justify-self: center;
+  display:grid;
+  place-items: center;
+  justify-content: center;
+
+
+  position:relative;
+  z-index:100;
+
+  height: 80px;
+  aspect-ratio: 1/ 1;
+  border-radius: 50%;
+  background: conic-gradient(var(--color) 0, var(--color) var(--angle), white var(--angle),white 360deg);
+}
+
+.pdata::after{
+  content:'';
+  position:absolute;
+  z-index: -1;
+  height: 90%;
+  width: 90%;
+  top: 5%;
+  left: 5%;
+  border-radius: 50%;
+  background-color: var(--green);
+}
+
+
+#counter{
+  align-self: center;
+  justify-self: center;
+  display:flex;
+}
+
+.cdata{
+  --angle: 360deg;
+  --color: rgb(138, 175, 36);
+
+  grid-area: counter;
+  align-self: center;
+  justify-self: center;
+  display:grid;
+  place-items: center;
+  justify-content: center;
+
+
+  position:relative;
+  z-index:100;
+
+  height: 80px;
+  aspect-ratio: 1/ 1;
+  border-radius: 50%;
+  background: conic-gradient(var(--color) 0, var(--color) var(--angle), white var(--angle),white 360deg);
+}
+
+.cdata::after{
+  content:'';
+  position:absolute;
+  z-index: -1;
+  height: 90%;
+  width: 90%;
+  top: 5%;
+  left: 5%;
+  border-radius: 50%;
+  background-color: var(--green);
+}
+
+
+.bottoniapedali{
+  grid-area: inizia;
+  align-self: center;
+  justify-self: center;
+}
+
+#inizia{
+  border-width: 2px;
+  border-color: var(--green);
+  border-radius: 5px;
+  cursor: pointer;
+  background: skyblue ;
+}
+
+#inizia:hover{
+  background: var(--green);
+  color: var(--red) ;
+}
+
+
